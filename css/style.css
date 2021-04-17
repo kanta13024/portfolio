@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+@import url(reset.css);
+
+/* 共有------------------------------------ */
+body, #Home h1, #Latest, #Wrapper, #Work, #Work #Footer {
+	background-color: #f9f9f9;
+	}
+
+a.Border {
+border-bottom: dotted 1px;
+border-color: #f9f9f9;
+}
+
+#Header dl, #wrapper, #About #Share {
+    width: 1096px;
+}
+
+/* ボディ------------------------------------ */
+body {
+    width: 100%;
+    font-size: 12px;
+    font-family: 'Dosis', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", cursive;;
+}
+
+body, a {
+	line-height: 1;
+	color: #231815;
+	}
+	
+body.Fixed {
+	position: fixed;
+	overflow-y: scroll;
+	}
+
+/* ヘッダー---------------------------------- */
+#Header {
+    width: 100%;
+    text-align: center;
+    z-index: 98;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+/* サイドバーメニュー */
+#openSidebarMenu {
+    transition: all 0.3S;
+    display: none;
+}
+
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: fixed;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 22px;
+    left: 15px;
+    height: 22px;
+    width: 22px;
+}
+
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: rgb(226, 202, 202);
+}
+
+/* チェック前 */
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    background: white;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.sidebarMenuInner {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.sidebarMenuInner li {
+    list-style: none;
+    color: #b3a7a7;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(142, 132, 132, 0.1);
+}
+
+.sidebarMenuInner span {
+    display: block;
+    color: #c1a7a7;
+    text-align: center;
+    border-bottom: 1px solid rgba(142, 132, 132, 0.1);
+}
+
+/*ヘッダートップ*/
+
+#Header dl {
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin: 0px 0px 0px -550px;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+}
+
+#Header dt {
+    float: left;
+    z-index: 96;
+}
+
+#Header dd {
+    float: right;
+}
+
+#Header dd a {
+    display: inline;
+    color: #aaaaaa;
+    text-decoration: none;
+}
+
+#Header_Text, #Header_Text h1, #Header_Text h1 a {
+    background-color: white
+}
+
+#Header_Text {
+    width: 100%;
+    text-align: center;
+    padding: 300px 0px 300px 0px;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+#Header_Text h1, #Header_Text h1 a {
+    display: inline;
+    text-decoration: none;
+}
+
+#Header_Text h1 span {
+    padding-top: 5px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #aaaaaa;
+    display: block;
+}
+
+/*メインウィンドウの実装*/
+#Wrapper {
+    margin: 0px auto 0px auto;
+    padding-top: 100px;
+}
+
+
+/* レイアウト調整用 */
+#Wrapper {
+    margin-top: 120px;
+    border: 1px solid black;
+}
